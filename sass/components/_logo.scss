@@ -1,0 +1,21 @@
+/* logo nav */
+.logo {
+  display: inline-block;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.logo__accent {
+  color: $primary-accent-clr;
+}
+.logo__main-txt {
+  color: #000000;
+}
+.logo--light-clr {
+  & .logo__main-txt {
+    color: #ffffff;
+  }
+}

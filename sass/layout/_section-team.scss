@@ -1,0 +1,55 @@
+.team {
+  display: flex;
+  background-color: #f5f4fa;
+}
+
+.team__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  color: $title-text-clr;
+}
+
+.team__list {
+  display: flex;
+  width: 270px;
+  height: 428px;
+}
+
+.team__name {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  color: $title-text-clr;
+}
+
+.team__job {
+  margin-top: 10px;
+  padding-bottom: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  color: $primary-text-clr;
+}
+
+.team__photo {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 30px;
+  width: 270px;
+  background-color: $primary-bg-clr;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__photo:last-child {
+  margin-right: 0;
+}
+.team__soc-net-list {
+  margin: 16px 32px 30px 32px;
+}

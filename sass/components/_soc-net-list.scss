@@ -1,0 +1,33 @@
+/*  svg іконкі для наша команда */
+.soc-net-list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 206px;
+  height: 44px;
+}
+
+.soc-net-list__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  color: #afb1b8;
+  fill: currentColor;
+  color: $light-grey-clr;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.soc-net-list__link--dark-bg {
+  color: $primary-bg-clr;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-net-list__link:hover,
+.soc-net-list__link:focus {
+  fill: $primary-bg-clr;
+  background-color: $primary-accent-clr;
+}

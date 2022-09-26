@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* body */
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  color: $primary-text-clr;
+
+  background-color: $primary-bg-clr;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration-line: none;
+}
+
+ul,
+p,
+div,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.no-padding {
+  padding-top: 0;
+}
+
+img {
+  display: block;
+  box-sizing: border-box;
+  height: auto;
+}
