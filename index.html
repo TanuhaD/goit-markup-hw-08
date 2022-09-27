@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="./css/main.min.css" />
 
-    <title>Студія</title>
+    <title>Студия</title>
   </head>
   <body>
     <!-- шапка сайта -->
@@ -32,7 +32,7 @@
         <nav class="site-nav">
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link current" href="./index.html">Студія</a>
+              <a class="site-nav__link site-nav__link--current" href="./index.html">Студія</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
@@ -45,7 +45,7 @@
         <ul class="contact-list">
           <li class="contact-list__item">
             <a class="contact-list__link" href="mailto:info@devstudio.com">
-              <svg class="contact-list__icon" width="16" height="12">
+              <svg class="contact-list__icon contact-list__icon--env" width="16" height="12">
                 <use href="./img/icons.svg#icon-mail"></use>
               </svg>
               <span class="mail"> info@devstudio.com</span></a
@@ -54,7 +54,7 @@
 
           <li class="contact-list__item">
             <a class="contact-list__link" href="tel:+380961111111">
-              <svg class="contact-list__icon" width="10" height="16">
+              <svg class="contact-list__icon contact-list__icon--phone" width="10" height="16">
                 <use href="./img/icons.svg#icon-smartphone1"></use>
               </svg>
               +38 096 111 11 11</a
@@ -140,7 +140,7 @@
         <div class="features__container container">
           <h2 class="features__title visually-hidden">Переваги</h2>
           <ul class="features__list">
-            <li class="features__item features__item--antenna">
+            <li class="features__item">
               <div class="features__icon-wrapper">
                 <svg class="features__icon">
                   <use href="./img/icons.svg#antenna"></use>
@@ -151,7 +151,7 @@
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
-            <li class="features__item features__item--clock">
+            <li class="features__item">
               <div class="features__icon-wrapper">
                 <svg class="features__icon">
                   <use href="./img/icons.svg#clock"></use>
@@ -162,7 +162,7 @@
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе
               </p>
             </li>
-            <li class="features__item features__item--diagram">
+            <li class="features__item">
               <div class="features__icon-wrapper">
                 <svg class="features__icon">
                   <use href="./img/icons.svg#diagram"></use>
@@ -173,7 +173,7 @@
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li class="features__item features__item--austranavt">
+            <li class="features__item">
               <div class="features__icon-wrapper">
                 <svg class="features__icon">
                   <use href="./img/icons.svg#astronaut"></use>
@@ -245,9 +245,9 @@
                 />
                 <img class="team-list__img" src="./img/team/photo1-450.jpg" alt="Дизайнер" />
               </picture>
-              <div class="team-box">
-                <h3 class="team-box__name">Ігор Дем'яненко</h3>
-                <p class="team-box__job">Product Designer</p>
+              <div class="team__box">
+                <h3 class="team__name">Ігор Дем'яненко</h3>
+                <p class="team__job">Product Designer</p>
 
                 <ul class="soc-net-list team__soc-net-list">
                   <li class="soc-net-list__item">
@@ -285,28 +285,25 @@
             <li class="team__photo">
               <picture>
                 <source
-                  srcset="./img/team/olga-dsk-270.jpg 270w, ./img/team/olga-dsk-540.jpg 540w"
+                  srcset="./img/team/photo2-270.jpg 270w, ./img/team/photo2-540.jpg 540w"
                   media="(min-width: 1200px)"
                   sizes="270px"
                 />
                 <source
-                  srcset="./img/team/olga-tab-354.jpg 354w, ./img/team/olga-tab-708.jpg 708w"
+                  srcset="./img/team/photo2-354.jpg 354w, ./img/team/photo2-708.jpg 708w"
                   media="(min-width: 768px)"
                   sizes="354px"
                 />
                 <source
-                  srcset="./img/team/olga-mob-450.jpg 450w, ./img/team/olga-mob-900.jpg 900w"
+                  srcset="./img/team/photo2-450.jpg 450w, ./img/team/photo2-900.jpg 900w"
                   sizes="450px"
                 />
-                <img
-                  class="team-list__img"
-                  src="./img/team/olga-mob-450.jpg"
-                  alt="Розробник інтерфейсу"
-                />
+                <img class="team-list__img" src="./img/team/photo2-450.jpg" alt="Developer" />
               </picture>
-              <div class="team-box">
-                <h3 class="team-box__name">Ольга Рєпіна</h3>
-                <p class="team-box__job">Frontend Developer</p>
+              <div class="team__box">
+                <h3 class="team__name">Ольга Рєпіна</h3>
+                <p class="team__job">Frontend Developer</p>
+
                 <ul class="soc-net-list team__soc-net-list">
                   <li class="soc-net-list__item">
                     <a href="" class="soc-net-list__link">
@@ -356,11 +353,12 @@
                   srcset="./img/team/photo3-450.jpg 450w, ./img/team/photo3-900.jpg 900w"
                   sizes="450px"
                 />
-                <img class="team-list__img" src="./img/team/photo3-450.jpg" alt="Маркетинг" />
+                <img class="team-list__img" src="./img/team/photo3-450.jpg" alt="Marketing" />
               </picture>
-              <div class="team-box">
-                <h3 class="team-box__name">Микола Тарасов</h3>
-                <p class="team-box__job">Marketing</p>
+              <div class="team__box">
+                <h3 class="team__name">Микола Тарасов</h3>
+                <p class="team__job">Marketing</p>
+
                 <ul class="soc-net-list team__soc-net-list">
                   <li class="soc-net-list__item">
                     <a href="" class="soc-net-list__link">
@@ -410,15 +408,11 @@
                   srcset="./img/team/photo4-450.jpg 450w, ./img/team/photo4-900.jpg 900w"
                   sizes="450px"
                 />
-                <img
-                  class="team-list__img"
-                  src="./img/team/photo4-450.jpg"
-                  alt="Дизайнер інтерфейсу користувача"
-                />
+                <img class="team-list__img" src="./img/team/photo4-450.jpg" alt="UI Designer" />
               </picture>
-              <div class="team-box">
-                <h3 class="team-box__name">Михайло Єрмаков</h3>
-                <p class="team-box__job">UI Designer</p>
+              <div class="team__box">
+                <h3 class="team__name">Михайло Єрмаков</h3>
+                <p class="team__job">UI Designer</p>
 
                 <ul class="soc-net-list team__soc-net-list">
                   <li class="soc-net-list__item">
@@ -458,49 +452,49 @@
 
       <!-- permanent clients -->
       <section class="section client">
-        <div class="container">
-          <h2 class="client-title">Постійні клієнти</h2>
-          <ul class="client-list">
-            <li class="client-item">
-              <a class="icon" href="">
-                <svg width="106" height="60">
+        <div class="client__container container">
+          <h2 class="client__title">Постійні клієнти</h2>
+          <ul class="client__list">
+            <li class="client__item">
+              <a class="client__link" href="">
+                <svg class="client__icon" width="106" height="60">
                   <use href="./img/icons.svg#icon-Logo1"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="client-item">
-              <a class="icon" href=""
-                ><svg width="106" height="60">
+            <li class="client__item">
+              <a class="client__link" href=""
+                ><svg class="client__icon" width="106" height="60">
                   <use href="./img/icons.svg#icon-Logo2"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="client-item">
-              <a class="icon" href=""
-                ><svg width="106" height="60">
+            <li class="client__item">
+              <a class="client__link" href=""
+                ><svg class="client__icon" width="106" height="60">
                   <use href="./img/icons.svg#icon-Logo3"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-item">
-              <a class="icon" href=""
-                ><svg width="106" height="60">
+            <li class="client__item">
+              <a class="client__link" href=""
+                ><svg class="client__icon" width="106" height="60">
                   <use href="./img/icons.svg#icon-Logo4"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-item">
-              <a class="icon" href=""
-                ><svg width="106" height="60">
+            <li class="client__item">
+              <a class="client__link" href=""
+                ><svg class="client__icon" width="106" height="60">
                   <use href="./img/icons.svg#icon-Logo5"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-item">
-              <a class="icon" href=""
-                ><svg width="106" height="60">
+            <li class="client__item">
+              <a class="client__link" href=""
+                ><svg class="client__icon" width="106" height="60">
                   <use href="./img/icons.svg#icon-Logo6"></use>
                 </svg>
               </a>
@@ -512,7 +506,7 @@
     <!-- footer -->
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__box--adress">
+        <div class="footer__box footer__box--adress">
           <a class="logo logo--light-clr footer__logo" href="./index.html">
             <span class="logo__accent">Web</span><span class="logo__footer-txt">Studio</span></a
           >
@@ -534,7 +528,7 @@
             </ul>
           </address>
         </div>
-        <div class="footer__box--join">
+        <div class="footer__box footer__box--join">
           <h2 class="footer-join__title">Приєднуйтесь</h2>
           <ul class="soc-net-list">
             <li>
@@ -567,11 +561,11 @@
             </li>
           </ul>
         </div>
-        <div class="footer__box--sub-form">
+        <div class="footer__box footer__box--sub-form">
           <form action="subscripshion-form">
             <label class="subscripshion-form__label" for="footer-mail">
               <h2 class="subscripshion-form__title">Підпишіться на розсилку</h2>
-              <div class="subscripshion-form__box">
+              <div class="subscripshion-form__wrapper">
                 <input
                   class="subscripshion-form__input"
                   type="email"

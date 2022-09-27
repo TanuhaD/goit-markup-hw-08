@@ -11,14 +11,35 @@
   line-height: 1.17;
   color: $title-text-clr;
 }
-.team__photo {
-  margin-bottom: 30px;
+.team__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
-.team-box {
+.team__photo {
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  background-color: $primary-bg-clr;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+  }
+}
+.team__box {
+  margin-top: 30px;
   background-color: $primary-bg-clr;
 }
-.team-box__name {
-  padding-top: 30px;
+.team__name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -26,9 +47,8 @@
   letter-spacing: 0.03em;
   color: $title-text-clr;
 }
-.team-box__job {
-  padding-bottom: 16px;
-  padding-top: 10px;
+.team__job {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
@@ -41,5 +61,4 @@
 .team__soc-net-list {
   align-items: center;
   margin: auto;
-  padding-bottom: 24px;
 }

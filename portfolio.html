@@ -4,42 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
 
-    <title>Портфоліо</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+
+    <title>Портфолио</title>
   </head>
   <body>
     <a href="" class="test-link"></a>
     <!-- Шапка -->
     <header class="header">
-      <div class="header__container">
+      <div class="container header__container">
+        <a class="logo header__logo" href="./index.html"
+          ><span class="logo__accent">Web</span><span class="logo__main-txt">Studio</span>
+        </a>
         <nav class="site-nav">
-          <a class="logo logo--site-nav" href="./index.html"
-            ><span class="logo__accent">Web</span><span class="logo__main-txt">Studio</span>
-          </a>
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link" href="./index.html">Студія</a>
+              <a class="site-nav__link current" href="./index.html">Студія</a>
             </li>
             <li class="site-nav__item">
-              <a class="site-nav__link current" href="./portfolio.html">Портфоліо</a>
+              <a class="site-nav__link site-nav__link--current" href="./portfolio.html"
+                >Портфоліо</a
+              >
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="">Контакти</a>
             </li>
           </ul>
         </nav>
-
         <ul class="contact-list">
           <li class="contact-list__item">
             <a class="contact-list__link" href="mailto:info@devstudio.com">
@@ -59,17 +64,71 @@
             >
           </li>
         </ul>
+        <div class="mob-menu js-menu-container">
+          <ul class="mob-menu__nav-list">
+            <li class="mob-menu__nav-item">
+              <a class="mob-menu__nav-link" href="./index.html">Студія</a>
+            </li>
+            <li class="mob-menu__nav-item">
+              <a class="mob-menu__nav-link mob-menu__nav-link--current" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mob-menu__nav-item">
+              <a class="mob-menu__nav-link" href="">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mob-menu__contact-list">
+            <li class="mob-menu__contact-item">
+              <a class="mob-menu__contact-link mob-menu__link--current" href="tel:+380961111111"
+                >+38 096 111 11 11
+              </a>
+            </li>
+            <li class="mob-menu__contact-item">
+              <a
+                class="mob-menu__contact-link mob-menu__link--sub"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="mob-menu__soc-list">
+            <li class="mob-menu__soc-item">
+              <a class="mob-menu__soc-link" href="">Instagram</a>
+            </li>
+            <li class="mob-menu__soc-item">
+              <a class="mob-menu__soc-link" href="">Twitter</a>
+            </li>
+            <li class="mob-menu__soc-item">
+              <a class="mob-menu__soc-link" href="">Facebook</a>
+            </li>
+            <li class="mob-menu__soc-item">
+              <a class="mob-menu__soc-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+          <button type="button" class="mob-menu__btn js-btn-menu-close">
+            <svg width="40" height="40" aria-label="Кнопка мобільного меню">
+              <use class="mob-menu__icon" href="./img/icons.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="mob-menu__btn js-btn-menu-open">
+          <svg width="40" height="40" aria-label="Кнопка мобільного меню">
+            <use class="mob-menu__icon" href="./img/icons.svg#menu-icon-open"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- main -->
     <main>
       <!-- filter -->
       <section class="filter section">
-        <div class="filter-container container">
+        <div class="filter__container container">
           <h1 class="visually-hidden">Наши роботи</h1>
           <ul class="filter__list">
             <li class="filter__item">
-              <button class="button filter--button" type="button">Усі</button>
+              <button class="button button--active" type="button">Усі</button>
             </li>
             <li class="filter__item">
               <button class="button filter--button" type="button">Веб-сайти</button>
@@ -91,7 +150,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img8!.jpg" alt="Веб-сайт Технокряк" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects1-370.jpg 370w,
+                        ./img/projects/projects1-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects1-354.jpg 354w,
+                        ./img/projects/projects1-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects1-450.jpg 450w,
+                        ./img/projects/projects1-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects1-900.jpg"
+                      alt="Приклад роботи студії під назвою Технокряк"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -108,7 +197,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img class="menu-img" src="./img/img9!.jpg" alt=" Дизайн Постера" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects2-370.jpg 370w,
+                        ./img/projects/projects2-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects2-354.jpg 354w,
+                        ./img/projects/projects2-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects2-450.jpg 450w,
+                        ./img/projects/projects2-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects2-900.jpg"
+                      alt="Дизайн постера"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -124,7 +243,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img10!.jpg" alt=" Додаток Ресторана" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects3-370.jpg 370w,
+                        ./img/projects/projects3-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects3-354.jpg 354w,
+                        ./img/projects/projects3-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects3-450.jpg 450w,
+                        ./img/projects/projects3-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects3-900.jpg"
+                      alt="Додаток ресторана Sea-food"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -140,7 +289,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img11!.jpg" alt="Маркетинг проєкта" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects4-370.jpg 370w,
+                        ./img/projects/projects4-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects4-354.jpg 354w,
+                        ./img/projects/projects4-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects4-450.jpg 450w,
+                        ./img/projects/projects4-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects4-900.jpg"
+                      alt="Маркетинг проєкта"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -156,7 +335,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img12!.jpg" alt="Додаток проєкта" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects5-370.jpg 370w,
+                        ./img/projects/projects5-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects5-354.jpg 354w,
+                        ./img/projects/projects5-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects5-450.jpg 450w,
+                        ./img/projects/projects5-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects5-900.jpg"
+                      alt="Додаток проєкта"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -172,7 +381,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img13!.jpg" alt="Разработка Веб-сайта" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects6-370.jpg 370w,
+                        ./img/projects/projects6-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects6-354.jpg 354w,
+                        ./img/projects/projects6-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects6-450.jpg 450w,
+                        ./img/projects/projects6-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects6-900.jpg"
+                      alt="Разборка веб сайта"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -188,7 +427,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img14!.jpg" alt="Дизайн Видання" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects7-370.jpg 370w,
+                        ./img/projects/projects7-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects7-354.jpg 354w,
+                        ./img/projects/projects7-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects7-450.jpg 450w,
+                        ./img/projects/projects7-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects7-900.jpg"
+                      alt="Разборка веб сайта"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -204,7 +473,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img15!.jpg" alt="Маркетинг проєкта" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects8-370.jpg 370w,
+                        ./img/projects/projects8-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects8-354.jpg 354w,
+                        ./img/projects/projects8-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects8-450.jpg 450w,
+                        ./img/projects/projects8-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects8-900.jpg"
+                      alt="Разборка веб сайта"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -220,7 +519,37 @@
             <li class="project-list">
               <a class="menu-link" href="">
                 <div class="submenu">
-                  <img src="./img/img16!.jpg" alt="Додаток проєкта" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/projects/projects9-370.jpg 370w,
+                        ./img/projects/projects9-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects9-354.jpg 354w,
+                        ./img/projects/projects9-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/projects9-450.jpg 450w,
+                        ./img/projects/projects9-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./img/projects/projects9-900.jpg"
+                      alt="Разборка веб сайта"
+                    />
+                  </picture>
                   <p class="menu-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -239,10 +568,11 @@
     </main>
     <!-- footer -->
     <footer class="footer">
+      k
       <div class="footer__container container">
         <div class="footer__box--adress">
           <a class="logo logo--light-clr footer__logo" href="./index.html">
-            <span class="logo__accent">Web</span><span class="logo__main-txt">Studio</span></a
+            <span class="logo__accent">Web</span><span class="logo__footer-txt">Studio</span></a
           >
           <address>
             <ul class="footer__adr-list">
@@ -299,7 +629,7 @@
           <form action="subscripshion-form">
             <label class="subscripshion-form__label" for="footer-mail">
               <h2 class="subscripshion-form__title">Підпишіться на розсилку</h2>
-              <div class="subscripshion-form__box">
+              <div class="subscripshion-form__wrapper">
                 <input
                   class="subscripshion-form__input"
                   type="email"
@@ -319,6 +649,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script src="./js/mob-menu.js"></script>
   </body>
 </html>
