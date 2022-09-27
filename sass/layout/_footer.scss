@@ -1,0 +1,65 @@
+.footer {
+  background-color: #2f303a;
+}
+.footer__container {
+  width: 480px;
+  height: 608px;
+}
+.footer__box--adress {
+  padding-top: 60px;
+  text-align: center;
+}
+.footer__box--adress {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.footer__adr-list {
+  margin-top: 20px;
+}
+.footer__adr-item {
+  margin-bottom: 8px;
+}
+.footer__adr-link--map {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-bg-clr;
+}
+.footer__adr-link {
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__box--join {
+  margin-bottom: 60px;
+  margin: auto;
+  width: 206px;
+  height: 80px;
+}
+.footer-join__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer__box--sub-form {
+  padding-top: 60px;
+}
+.subscripshion-form__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
