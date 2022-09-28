@@ -5,6 +5,10 @@
   background-size: contain;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../img/hero/hero480.jpg');
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../img/hero/hero960.jpg');
+  }
   @media screen and (min-width: 768px) {
     max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -16,16 +20,36 @@
         url('../img/hero/hero1536.jpg');
     }
   }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../img/hero/hero1600.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../img/hero/hero3200.jpg');
+    }
+  }
 }
 .hero__container {
   display: flex;
   height: 400px;
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+  }
 }
 .hero__wrapper {
   text-align: center;
   margin: auto;
   @media screen and (min-width: 768px) {
     width: 360px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 696px;
   }
 }
 .hero__title {
@@ -37,4 +61,8 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

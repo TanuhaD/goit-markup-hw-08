@@ -2,8 +2,12 @@
   background-color: $primary-bg-clr;
 }
 .client__container {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .client__title {
   margin-bottom: 30px;
@@ -13,6 +17,11 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-clr;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .client__list {
@@ -40,6 +49,9 @@
   }
   @media screen and (min-width: 768px) {
     width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
 .client__icon {

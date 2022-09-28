@@ -3,6 +3,10 @@
   padding-bottom: 60px;
   padding-top: 60px;
   background-color: #f5f4fa;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .team__title {
   margin-bottom: 30px;
@@ -10,6 +14,11 @@
   font-size: 28px;
   line-height: 1.17;
   color: $title-text-clr;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 .team__list {
   @media screen and (min-width: 768px) {
@@ -32,6 +41,9 @@
   border-radius: 0px 0px 4px 4px;
   @media screen and (min-width: 768px) {
     margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
   }
 }
 .team__box {
