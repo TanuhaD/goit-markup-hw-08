@@ -48,18 +48,18 @@ img {
 }
 
 .container {
-  width: 480px;
+  max-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -1023,6 +1023,12 @@ img {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .team-list__img {
+    width: calc(100vw - 30px);
+  }
+}
+
 .team__box {
   margin-top: 30px;
   background-color: #ffffff;
@@ -1132,20 +1138,20 @@ img {
 }
 
 .footer__container {
-  width: 480px;
+  max-width: 480px;
   height: 608px;
   padding: 60px 15px;
 }
 @media screen and (min-width: 768px) {
   .footer__container {
-    width: 768px;
+    max-width: 768px;
     height: 463px;
     padding: 60px 89px 60px 76px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
-    width: 1200px;
+    max-width: 1200px;
     height: 252px;
     padding: 60px 15px;
     white-space: nowrap;
@@ -1273,7 +1279,8 @@ img {
 
 .subscripshion-form__input {
   height: 50px;
-  width: 450px;
+  max-width: 450px;
+  width: calc(100vw - 30px);
   padding-left: 13px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1302,7 +1309,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .subscripshion-form__input {
-    width: 358px;
+    max-width: 358px;
     margin-right: 10px;
   }
 }

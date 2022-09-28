@@ -46,6 +46,11 @@
     padding-bottom: 30px;
   }
 }
+.team-list__img {
+  @media screen and (max-width: 479px) {
+    width: calc(100vw - 30px);
+  }
+}
 .team__box {
   margin-top: 30px;
   background-color: $primary-bg-clr;
