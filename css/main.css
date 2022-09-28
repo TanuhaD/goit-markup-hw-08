@@ -49,6 +49,7 @@ img {
 
 .container {
   max-width: 480px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -258,6 +259,7 @@ img {
 
 .mob-menu__soc-list {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 40px;
 }
 
