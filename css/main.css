@@ -15,8 +15,7 @@ ul {
 
 a {
   color: inherit;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 p,
@@ -458,15 +457,6 @@ img {
   outline: none;
 }
 .form-user__comment::-moz-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.form-user__comment:-ms-input-placeholder {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -1098,6 +1088,7 @@ img {
 
 .client__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: -15px;
 }
@@ -1293,9 +1284,6 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscripshion-form__input:hover::-moz-placeholder, .subscripshion-form__input:focus::-moz-placeholder {
-  font-size: 0;
-}
-.subscripshion-form__input:hover:-ms-input-placeholder, .subscripshion-form__input:focus:-ms-input-placeholder {
   font-size: 0;
 }
 .subscripshion-form__input:hover::placeholder, .subscripshion-form__input:focus::placeholder {

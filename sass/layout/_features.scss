@@ -19,7 +19,7 @@
       margin-bottom: 30px;
     }
   }
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 354px;
     flex-shrink: 0;
     margin: 15px;
@@ -40,7 +40,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $title-text-clr;
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     text-align: left;
   }
 }
